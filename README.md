@@ -40,17 +40,23 @@ The Application Runs on **localhost:3000**
 
 #### Components
 
-1. **Customers** Component : This Component displays a list of customers. This Component gets the data from a json file in assets folder
+1.  **`App`**: The main application component acting as the entry point after `index.js`. It utilizes `react-router-dom` to manage routing between different views, such as the main charity page and the customer list page.
 
-2. **CustomerDetails** Component : This Component Displays the details of the selected customer. This Component gets its data from a json file in assets folder as well. This Component is the Child Component of *Customers* Component
+2.  **`Header`**: Renders the navigation bar displayed at the top of the page. Includes navigation links (Donations, Institutions, etc.) and authentication buttons (Sign In, Register).
+
+3.  **`Hero`**: Displays the large banner section prominently below the header. It features a background image (`heroImg.jpg` imported locally) and overlay text ("Make a difference today").
+
+4.  **`CharitySection`**: This component serves as the container for displaying the list of available charitable causes. It includes the section heading ("Charitable Causes You Can Donate To Right Now:") and arranges `CharityCard` components in a grid layout. The data for the charities (including images like `charityImg1.png`, etc.) is currently defined as an array of objects directly within this component.
+
+5.  **`CharityCard`**: Represents a single card displaying information about a specific charitable cause. It shows the charity's image, title, organization name, donation progress bar, amount raised, and donation end date. This is a *Child Component* of the `CharitySection` Component and receives its data via props.
+
+6.  **`Footer`**: Renders the footer section at the bottom of the page. Includes a logo placeholder, social media links, and columns of resource/navigation links (Use cases, Explore, Resources).
+
+7.  **`Customers`**: (From original structure) This component displays a list of customers and is accessible via the `/customerlist` route defined in `App.js`. It likely gets its data from a JSON file or an API endpoint as per the original application design.
 
 #### HTTP client
 
 **axios** library is used to make HTTP Calls
-
-#### URL
-
-The application has just one url /customerlist which ties to *Customers* Component
 
 ## Resources
 
