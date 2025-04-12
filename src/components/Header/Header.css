@@ -1,0 +1,111 @@
+/* src/components/Header/Header.css */
+/* Note: These styles are now GLOBAL */
+.header {
+    background-color: #063058; /* Dark Blue */
+    color: #ffffff;
+    padding: 10px 5%; /* Adjust padding as needed */
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoPlaceholder {
+      font-weight: bold;
+      font-size: 1.2em;
+      display: flex;
+      /* Add styles if using an image logo */
+  }
+  
+  .navList {
+    display: flex;
+    gap: 25px; /* Spacing between nav items */
+    list-style: none; /* Ensure list style is none */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Target links within navList for specificity */
+  .navList li a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    text-decoration: none; /* Ensure no underline */
+  }
+  
+  .navList li a:hover {
+    color: #cccccc; /* Lighter color on hover */
+  }
+  
+  .authButtons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Target buttons directly */
+  .signInButton, .registerButton {
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  
+  .signInButton {
+    background-color: #ffffff;
+    color: #0a2540; /* Dark Blue */
+    border: 1px solid #ffffff;
+  }
+  
+  .signInButton:hover {
+      background-color: #f0f0f0;
+  }
+  
+  
+  .registerButton {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  
+  .registerButton:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+  }
+
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+  }
+  
+  /* Basic responsiveness */
+  @media (max-width: 992px) {
+      .navList {
+          gap: 15px;
+      }
+      .header {
+          padding: 10px 3%;
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .navList {
+         display: none; /* Hide nav links on smaller screens - requires burger menu implementation */
+      }
+      .nav {
+          justify-content: space-between; /* Ensure logo and buttons are spaced */
+      }
+      .logoPlaceholder {
+          flex-grow: 1; /* Allow logo to take space if nav is hidden */
+      }
+  }

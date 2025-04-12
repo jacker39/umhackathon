@@ -1,0 +1,143 @@
+/* src/components/Footer/Footer.css */
+/* Note: These styles are now GLOBAL */
+.footer {
+  background-color: #063058; /* Dark Blue */
+  color: #bdc6d4; /* Lighter text color for contrast */
+  padding: 50px 5%;
+  font-size: 0.9rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 40px; /* Gap between left/right sections and columns */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leftSection {
+  flex-basis: 20%; /* Adjust basis as needed */
+  min-width: 150px;
+}
+
+.logoPlaceholder { /* Ensure class name matches JS */
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff; /* White logo text */
+}
+
+.socialIcons { /* Ensure class name matches JS */
+  display: flex;
+  gap: 15px;
+}
+
+/* Target links within socialIcons */
+.socialIcons a {
+  color: #bdc6d4; /* Icon color */
+  font-size: 1.2rem; /* Adjust icon size */
+  transition: color 0.2s ease;
+   /* Styling for text placeholders */
+  border: 1px solid #bdc6d4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socialIcons a:hover {
+  color: #ffffff; /* White on hover */
+  border-color: #ffffff;
+}
+
+.rightSection { /* Ensure class name matches JS */
+  flex-basis: 70%; /* Adjust basis */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px; /* Gap between link columns */
+}
+
+.linkColumn { /* Ensure class name matches JS */
+  flex: 1; /* Allow columns to share space */
+  min-width: 150px; /* Prevent columns from becoming too narrow */
+}
+
+/* Target h4 within linkColumn */
+.linkColumn h4 {
+  color: #ffffff; /* White headings */
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Target ul within linkColumn */
+.linkColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Target li within linkColumn */
+.linkColumn li {
+  margin-bottom: 10px;
+}
+
+/* Target links within linkColumn */
+.linkColumn a {
+  color: #bdc6d4; /* Link color */
+  transition: color 0.2s ease;
+  text-decoration: none; /* Ensure no underline */
+}
+
+.linkColumn a:hover {
+  color: #ffffff; /* White on hover */
+  text-decoration: underline;
+}
+
+.logo {
+  width: 50px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
+  margin-top: auto;
+  margin-bottom: auto; /* Center vertically */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center items when stacked */
+        text-align: center;
+    }
+    .leftSection, .rightSection {
+        flex-basis: 100%; /* Full width when stacked */
+        align-items: center; /* Center content within sections */
+    }
+    .socialIcons {
+        justify-content: center; /* Center icons */
+    }
+    .rightSection {
+       justify-content: center; /* Center link columns */
+        gap: 40px; /* Adjust gap for vertical layout */
+    }
+    .linkColumn {
+        min-width: 180px; /* Ensure columns have decent width */
+        text-align: left; /* Align text left within columns */
+    }
+}
+
+@media (max-width: 480px) {
+     .rightSection {
+        flex-direction: column; /* Stack columns on very small screens */
+        align-items: center;
+        text-align: center;
+    }
+     .linkColumn {
+        text-align: center; /* Center text in stacked columns */
+    }
+}

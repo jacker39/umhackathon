@@ -1,0 +1,37 @@
+/* src/components/CharitySection/CharitySection.css */
+/* Note: These styles are now GLOBAL */
+.charitySection {
+    padding: 50px 5%; /* Adjust padding */
+    background-color: #ffffff; /* White background for this section */
+    text-align: center; /* Center headings */
+  }
+  
+  /* Target h2 and p within charitySection for specificity */
+  .charitySection h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #333;
+  }
+  
+  .charitySection .subtitle { /* Increased specificity */
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 40px;
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center grid */
+  }
+  
+  @media (max-width: 768px) {
+      .charitySection {
+          padding: 40px 3%;
+      }
+      .cardGrid {
+          gap: 20px;
+      }
+  }

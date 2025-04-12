@@ -1,0 +1,58 @@
+/* src/components/Hero/Hero.css */
+/* Note: These styles are now GLOBAL */
+.hero {
+  position: relative; /* Needed for overlay */
+  height: 50vh; /* Adjust height as needed */
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.heroContent {
+  position: relative; /* Ensure content is above overlay */
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Target h1 and p within heroContent for specificity */
+.heroContent h1 {
+  font-size: 3.5rem; /* Large text */
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.heroContent p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+    .heroContent p {
+        font-size: 1.2rem;
+    }
+    .hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+}
