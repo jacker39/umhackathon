@@ -52,8 +52,6 @@ The Application Runs on **localhost:3000**
 
 6.  **`Footer`**: Renders the footer section at the bottom of the page. Includes a logo placeholder, social media links, and columns of resource/navigation links (Use cases, Explore, Resources).
 
-7.  **`Customers`**: (From original structure) This component displays a list of customers and is accessible via the `/customerlist` route defined in `App.js`. It likely gets its data from a JSON file or an API endpoint as per the original application design.
-
 #### HTTP client
 
 **axios** library is used to make HTTP Calls
